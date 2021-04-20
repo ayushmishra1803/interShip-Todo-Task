@@ -23,9 +23,11 @@ export class TodoServiceService {
   removeFromTODO(index) {
     this.todo.splice(index, 1);
     this.changedTodo.next(this.todo.slice());
+    localStorage.setItem('Todo', JSON.stringify(this.todo));
   }
   editToDoElemet(index, newTodo) {
     this.todo[index] = newTodo;
     this.changedTodo.next(this.todo.slice());
+    localStorage.setItem('Todo', JSON.stringify(this.todo));
   }
 }
