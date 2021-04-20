@@ -1,0 +1,16 @@
+.main-div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 2%;
+  color: white;
+}
+.outer-div {
+  background-image: linear-gradient(black, white, black);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

@@ -1,0 +1,17 @@
+<label>Title</label>
+<input
+  type="text"
+  placeholder="Enter the Title "
+  class="form-control"
+  [(ngModel)]="todo"
+  style="width: 100%"
+/>
+<label>Description</label>
+<textarea
+  placeholder="Enter the Description"
+  style="width: 100%;margin-top: 5%;"
+  rows="6"
+  class="form-control"
+  [(ngModel)]="todoDescription"
+></textarea>
+<button style="margin-top: 5%;" class="btn btn-success" (click)="onSave()">Save</button>

@@ -1,0 +1,58 @@
+<div
+  *ngIf="!edit"
+  style="
+    width: 100%;
+    display: flex;
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+  "
+>
+  <section style="width: 60%">
+    <span>{{ Todoitem.name }}</span> <br /><span>{{
+      Todoitem.description
+    }}</span>
+  </section>
+  <section style="width: 40%; display: flex; flex-direction: column">
+    <button
+      style="margin-bottom: 5%"
+      class="btn btn-primary"
+      (click)="OnEdit()"
+    >
+      Edit
+    </button>
+    <button class="btn btn-danger" (click)="removeToDo()">Remove</button>
+  </section>
+</div>
+<div
+  *ngIf="edit"
+  style="
+    width: 100%;
+    display: flex;
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+  "
+>
+<label>Title</label>
+  <input
+    type="text"
+    placeholder="Enter the Title "
+    class="form-control"
+    [(ngModel)]="Todoitem.name"
+    style="width: 90%"
+  />
+  <label style="margin-top: 5%;">Description</label>
+  <textarea
+    placeholder="Enter the Description"
+    style="width: 90%"
+    rows="6"
+    class="form-control"
+    [(ngModel)]="Todoitem.description"
+  ></textarea>
+  <button style="margin-top: 5%;" class="btn btn-primary" (click)="saveEdited()">Edit</button>
+</div>
